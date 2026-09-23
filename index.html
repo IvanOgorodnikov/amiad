@@ -6,10 +6,10 @@
     <title>Amiad Water Systems Russia — Официальный сайт в разработке</title>
     <style>
         :root {
-            --amiad-blue: #004B87;
-            --amiad-light-blue: #00A3E0;
-            --text-dark: #333333;
-            --bg-light: #F4F7F9;
+            --amiad-graphite: #2A2C2E;    /* Фирменный глубокий графитовый */
+            --amiad-red: #D6221D;         /* Акцентный красный Amiad */
+            --amiad-light-gray: #F5F6F7;  /* Светло-серый фон */
+            --text-main: #1C1D1E;         /* Почти черный для контрастного текста */
         }
 
         * {
@@ -19,15 +19,15 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-dark);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background-color: var(--amiad-light-gray);
+            color: var(--text-main);
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
 
-        /* Шапка с логотипом */
+        /* Шапка */
         header {
             background-color: #ffffff;
             padding: 20px 40px;
@@ -35,30 +35,34 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 3px solid var(--amiad-graphite);
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             font-weight: 800;
-            font-size: 24px;
-            color: var(--amiad-blue);
+            font-size: 26px;
+            color: var(--amiad-graphite);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        .logo-wave {
-            width: 35px;
-            height: 35px;
-            fill: var(--amiad-light-blue);
+        .logo-dot {
+            width: 14px;
+            height: 14px;
+            background-color: var(--amiad-red);
+            border-radius: 50%;
+            display: inline-block;
         }
 
         .tagline {
-            font-size: 14px;
-            color: #777;
-            font-style: italic;
-            font-weight: 400;
+            font-size: 13px;
+            color: #666;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
         }
 
         /* Главный контент */
@@ -75,23 +79,24 @@
             max-width: 650px;
             width: 100%;
             padding: 50px 40px;
-            border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0, 75, 135, 0.08);
-            border-top: 4px solid var(--amiad-blue);
-            text-align: center;
+            border-radius: 2px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid var(--amiad-red);
+            text-align: left;
         }
 
         h1 {
-            color: var(--amiad-blue);
-            font-size: 32px;
-            margin-bottom: 15px;
+            color: var(--amiad-graphite);
+            font-size: 34px;
+            margin-bottom: 10px;
             font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .subtitle {
-            color: var(--amiad-light-blue);
-            font-size: 18px;
-            font-weight: 600;
+            color: var(--amiad-red);
+            font-size: 15px;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 30px;
@@ -100,73 +105,76 @@
         p {
             font-size: 16px;
             line-height: 1.6;
-            color: #555555;
+            color: #4B4F52;
             margin-bottom: 35px;
         }
 
-        /* Сферы применения в стиле Amiad */
+        /* Сферы */
         .sectors {
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            gap: 12px;
             margin-bottom: 40px;
             flex-wrap: wrap;
         }
 
         .sector-tag {
-            background: #eef5fc;
-            color: var(--amiad-blue);
-            padding: 8px 18px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
+            background: var(--amiad-graphite);
+            color: #ffffff;
+            padding: 6px 16px;
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        /* Кнопка связи */
+        /* Кнопка */
         .btn-contact {
             display: inline-block;
-            background-color: var(--amiad-blue);
+            background-color: var(--amiad-red);
             color: #ffffff;
             text-decoration: none;
-            padding: 15px 35px;
+            padding: 16px 32px;
             font-weight: 600;
-            border-radius: 4px;
-            transition: background-color 0.2s ease;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.2s ease, transform 0.2s ease;
         }
 
         .btn-contact:hover {
-            background-color: #003663;
+            background-color: #B31A15;
         }
 
         /* Подвал */
         footer {
-            background-color: var(--amiad-blue);
-            color: #ffffff;
+            background-color: var(--amiad-graphite);
+            color: #A0A5A8;
             text-align: center;
-            padding: 25px 20px;
-            font-size: 14px;
+            padding: 30px 20px;
+            font-size: 13px;
+            line-height: 1.5;
         }
 
         footer a {
             color: #ffffff;
-            text-decoration: underline;
-            opacity: 0.8;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(255,255,255,0.4);
         }
 
         footer a:hover {
-            opacity: 1;
+            border-bottom-color: var(--amiad-red);
+            color: var(--amiad-red);
         }
 
         .global-notice {
-            margin-top: 10px;
+            margin-top: 8px;
             font-size: 12px;
-            opacity: 0.6;
         }
 
         @media (max-width: 600px) {
-            header { flex-direction: column; gap: 10px; text-align: center; }
-            .hero-card { padding: 30px 20px; }
-            h1 { font-size: 24px; }
+            header { flex-direction: column; gap: 10px; text-align: center; padding: 20px; }
+            .hero-card { padding: 35px 20px; }
+            h1 { font-size: 26px; }
         }
     </style>
 </head>
@@ -174,10 +182,7 @@
 
     <header>
         <div class="logo">
-            <svg class="logo-wave" viewBox="0 0 24 24">
-                <path d="M12,20C17.52,20 22,15.52 22,10C22,4.48 17.52,0 12,0C6.48,0 2,4.48 2,10C2,15.52 6.48,20 12,20M12,2C16.42,2 20,5.58 20,10C20,13.75 17.43,16.92 14,17.79V15C14,12.24 11.76,10 9,10H7V8C7,5.79 8.79,4 11,4H12V2Z"/>
-            </svg>
-            Amiad
+            Amiad<span class="logo-dot"></span>
         </div>
         <div class="tagline">Masters of Filtration</div>
     </header>
@@ -185,24 +190,24 @@
     <main>
         <div class="hero-card">
             <h1>Amiad Water Systems Russia</h1>
-            <div class="subtitle">Сайт в разработке</div>
+            <div class="subtitle">Сайт на реконструкции</div>
             
-            <p>Мы создаем русскоязычный сайт для предоставления передовых решений в области экологически чистой фильтрации воды.</br> amiad.ru готовится к запуску.</p>
+            <p>Мы разрабатываем официальную российскую платформу для дистрибуции передовых технологических решений в сфере очистки и фильтрации воды для индустриального и аграрного секторов.</p>
             
             <div class="sectors">
                 <span class="sector-tag">Промышленность</span>
                 <span class="sector-tag">Ирригация</span>
-                <span class="sector-tag">Очистка воды</span>
+                <span class="sector-tag">Фильтрация</span>
             </div>
 
-            <a href="mailto:info@amiad.ru" class="btn-contact">Связаться с нами: info@amiad.ru</a>
+            <a href="mailto:info@amiad.ru" class="btn-contact">Написать нам: info@amiad.ru</a>
         </div>
     </main>
 
     <footer>
         <div>© 2026 Amiad Water Systems. Все права защищены.</div>
         <div class="global-notice">
-            Для получения информации на других языках посетите глобальный сайт <a href="https://amiad.com" target="_blank" rel="noopener">amiad.com</a>.
+            Глобальная англоязычная версия доступна на <a href="https://amiad.com/" target="_blank" rel="noopener">amiad.com</a>.
         </div>
     </footer>
 
