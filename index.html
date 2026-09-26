@@ -74,6 +74,20 @@
             padding: 40px 20px;
         }
 
+        .header-container {
+            background: #ffffff;
+            max-width: 650px;
+            width: 100%;
+            padding: 50px 40px;
+            border-radius: 4px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-left: 6px solid var(--amiad-red);
+            text-align: left;
+            display: flex;         /* Включает режим Flexbox */
+            align-items: center;   /* Выравнивает картинку и текст ровно по центру по вертикали */
+            gap: 15px;             /* Создает удобный отступ между картинкой и текстом */
+
+        }
         .hero-card {
             background: #ffffff;
             max-width: 650px;
@@ -84,6 +98,7 @@
             border-left: 6px solid var(--amiad-red);
             text-align: left;
         }
+
 
         h1 {
             color: var(--amiad-graphite);
@@ -191,13 +206,13 @@
     </header>
 
     <main>
-        <div class="hero-card">
+        <div class="header-container">
             <img src="logo2.jpg" alt="Amiad Water Systems">
             <h1>Amiad Water Systems Russia</h1>
-            <div class="subtitle">Сайт на реконструкции</div>
-            
+            </div>
+        <div class="hero-card">
+            <div class="subtitle">Сайт на реконструкции</div>            
             <p>Мы разрабатываем сайт для дистрибуции передовых технологических решений в сфере очистки и фильтрации воды для индустриального и аграрного секторов.</p>
-            
             <div class="sectors">
                 <span class="sector-tag">Промышленность</span>
                 <span class="sector-tag">Ирригация</span>
